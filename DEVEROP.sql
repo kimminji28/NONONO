@@ -89,17 +89,17 @@ where  mpcontent = '수납할 공간이 여유로움';
 --insert ...
 
 merge into myproduct tbl1
-using (select '11' "mpno"
-                ,'새로운상품' mpname
-                ,14000 mpprice
-                ,'아주 좋은 상품' mpcontent
+using (select :npno mpno
+                ,:mpname mpname
+                ,:mpprice mpprice
+                ,:desc mpcontent
        from dual) tbl2
 on (tbl1.mpno = tbl2.mpno)
 when matched then
   update set
-     tbl.mpname = tbl2.mpname
+     tbl1.mpname = tbl2.mpname
     ,tbl1.mpprice = tbl2.mpprice
     ,tbl1.mpcontent = tbl2.mpcontent
 when not matched then
-  insert (mpno, mpname, mppirce, mpcontent)
+  insert (mpno, mpname, mpprice, mpcontent)
   values (tbl2.mpno, tbl2.mpname, tbl2.mpprice, tbl2.mpcontent);
