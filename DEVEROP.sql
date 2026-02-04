@@ -1,4 +1,6 @@
---emp Å×ÀÌºíÀ» Á¶È¸ÇÏ¿© ¸ðµç »ç¿øÀÇ ÀÌ¸§°ú ±Þ¿©¸¦ ¾Æ·¡¿Í °°Àº ÇüÅÂ·Î Ãâ·ÂÇÏ¼¼¿ä.
-SELECT ENAME || '''s ' || ( 'sal ')  || ('is ') || ('$') || sal || '' AS "Name And Sal"
-from emp
-order by sal;
+SELECT * 
+from emp;
+
+--ì¶”ê°€ìž‘ì—…(origin merge í…ŒìŠ¤íŠ¸)
+SELECT * 
+from dept;
