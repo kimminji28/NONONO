@@ -1,4 +1,7 @@
+ HEAD
 --emp 260202
+
+--emp    ̺      ȸ Ͽ             ̸     ޿     Ʒ            ·      ϼ   . 260202
 SELECT ENAME || '''s ' || ( 'sal ')  || ('is ') || ('$') || sal || '' AS "Name And Sal"
 from emp
 order by sal;
@@ -30,6 +33,7 @@ SELECT NAME
 FROM STUDENT
 order by 2;
 
+ HEAD
 select name
     ,to_char(birthday, 'Q') || '/4분기' quarter1
     ,ceil(to_char(birthday, 'MM') / 3) || '/4분기' quarter2
@@ -39,6 +43,7 @@ select name
     ,07, '3/4분기', 08, '3/4분기', 09, '3/4분기'
     ,10, '4/4분기', 11, '4/4분기', 12, '4/4분기') quarter3
 from student;
+
 
 
 --107page 1번
@@ -74,4 +79,7 @@ SELECT empno
     ,nvl2(comm, 'Exist', 'NULL') "NVL2"
 from emp
 where deptno = 30
+ HEAD
+ORDER BY 1;
+
 ORDER BY 1;
