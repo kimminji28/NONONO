@@ -1,3 +1,16 @@
+SELECT * from board;
+insert into board (board_no, title, writer,  content)
+                      values((SELECT max(board_no)+1 from board), 'test1', 'user01', 'a1a');
+insert into board (board_no, title, writer,  content)
+                      values((SELECT max(board_no)+1 from board), 'test2', 'user02', 'a62');                     
+insert into board (board_no, title, writer,  content)
+                      values((SELECT max(board_no)+1 from board), 'test3', 'user03', 'a3aa');
+insert into board (board_no, title, writer,  content)
+                      values((SELECT max(board_no)+1 from board), 'test1', 'user01', 'a6asafa');
+                      
+                      
+insert into board (board_no, title, writer,  content)
+values(6, 'test6', 'user06', 'a6aa'); --제발 쌍따음표를 까먹지마
 SELECT * 
 from emp;
 
@@ -79,7 +92,7 @@ update myproduct
 set    mpname = '수납장'
 where  mpcontent = '수납할 공간이 여유로움';
 
---머지 구문이 머지다
+--머지 구문 = 브랜치 병합
 --merge into table1
 --using table2
 --on 병합조건
@@ -103,3 +116,7 @@ when matched then
 when not matched then
   insert (mpno, mpname, mpprice, mpcontent)
   values (tbl2.mpno, tbl2.mpname, tbl2.mpprice, tbl2.mpcontent);
+  
+  
+SELECT b *
+from board;
